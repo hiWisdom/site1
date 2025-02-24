@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css */
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%; 
+
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url('/assets/fonts/AvenirLTStd/AvenirLTStd.ttf') format('truetype'),
+       url('/assets/fonts/AvenirLTStd/AvenirLTStd95Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; /* Ensures text is hidden until font loads */
+}
+
+@font-face {
+  font-family: "AvenirBold";
+  src: url('/assets/fonts/AvenirLTStd/AvenirLTStd95Black.ttf') format('truetype'),
+       url('/assets/fonts/AvenirLTStd/AvenirLTStd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; /* Ensures text is hidden until font loads */
+}
+
+/* .container-1420 {
+  border: 1px solid blue;
+  width: 98% !important;
+} */
+
+/* Hero (Desktop) */
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/assets/images/hero/hero-6.svg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.hero-text {
+  line-height: 1.2em
+}
+
+#faq,
+#explore,
+#about,
+#team
+  {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+
+.cta {
+  line-height: 1.3em;
+  letter-spacing: 10px;
+}
+
+/* .gradient-bg {
+  background: linear-gradient(120deg, #E86512 30%, #f4710f 70%);
+  
+} */
+
+/* .gradient-bg {
+  background: radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.2) 10%, transparent 50%),
+              radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.2) 10%, transparent 50%),
+              linear-gradient(180deg, #E86512, #f4710f);
+} */
+
+.gradient-bg {
+  background: 
+      radial-gradient(circle at left, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at right, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+      linear-gradient(90deg, #E86512, #f4710f);
+  border-radius: 32px;
+}
+
+/* .custom-bg {
+  position: relative;
+  background: linear-gradient(to right, #E86512, #f4710f);
+  border-radius: 32px;
+}
+
+.custom-bg::before,
+.custom-bg::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.custom-bg::before {
+  left: -20%;
+}
+
+.custom-bg::after {
+  right: -20%;
+} */
+
+
+
+.custom-bg {
+  position: relative;
+  background: linear-gradient(to right, #E86512, #f4710f);
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+/* Left Side - Parent Circle */
+.custom-bg::before {
+  content: "";
+  position: absolute;
+  width: 39%;
+  height: 120%;
+  top: -10%;
+  left: -15%;
+  border-radius: 15rem;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Left Side - Child Circle */
+.custom-bg::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0%;
+  left: -15%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Right Side - Large Circle */
+.right-circle {
+  position: absolute;
+  width: 96%;
+  height: 120%;
+  top: -10%;
+  right: -20%;
+  border-radius: 15rem;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+.services-title {
+  font-size: 17px !important;
+}
+
+.services-description {
+  font-size: 13px !important;
+}
+
+#services-text {
+  display: grid;
+  gap: 0.2em !important;
+}
+
+.services-text-title {
+  font-size: 31px !important;
+}
+
+.services-text-title-cite {
+  font-size: 13px !important;
+}
+
+
+/*1920*1080*/
+@media screen and (min-width: 1920px) {
+  .nine20 {
+    width: 80%;
+  }
+  .hero-text {
+    line-height: 2em
+  }
+
+  #services-container {
+    width: 85%;
+  }
+
+  #services-card {
+    gap: 2em;
+  }
+
+  #services-text {
+    display: grid;
+    gap: 2em;
+  }
+
+  #contact-form-container {
+    width: 591px;
+  }
+
+  #faq {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .about-modal {
+    height: 675px !important;
+  }
+
+  .team-image-m {
+    height: 450px;
+    width: 100% !important;
+   }
+  
+   .team-image {
+    height: fit-content !important;
+    /* width: 460px; */
+    border-radius: 5%;
+   } 
+
+   ol.roman-figure-list {
+    list-style-type: upper-roman !important;
+   }
+
+   #products {
+    padding: 0%
+  }
+
+  .services-title {
+    font-size: 28px !important;
+  }
+
+  .services-description {
+    font-size: 18px !important;
+  }
+
+  
+  .services-text-title {
+    font-size: 50px !important;
+  }
+
+  .services-text-title-cite {
+    font-size: 20px !important;
+  }
+
+  .services-text-description {
+    font-size: 20px !important;
+  }
+  
+    
+} 
+
+@media screen and (min-width: 1720px) {
+
+  .hero-text {
+    line-height: 1.7em
+  }
+  
+} 
+
+@media screen and (max-width: 800px) {
+
+  .hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 70vh;
+  }
+
+  #hero {
+    max-width: 100%;
+  }
+
+  .hero-main {
+    max-width: 100%;
+    margin-top: 12%;
+  }
+
+  .hero-text {
+    line-height:unset;
+    font-size: 28px;
+  }
+
+  .hero-main-2 {
+    display: grid;
+    gap: 1.8em;
+  }
+  
+  .heelHeid-Logo {
+    width: 60px;
+    height: 60.17px;
+    margin-left: 1em
+  }
+
+  #services-container {
+    margin: auto !important;
+    padding: 5%;
+  }
+
+  .services-box {
+    margin-bottom: 10%;
+  }
+
+  .product_servicesImage{
+    display: none;
+  }
+
+  #about {
+    flex-direction: column;
+  }
+
+  #faq,
+  #explore,
+  #about {
+    padding-left: 5.2%;
+    padding-right: 5.2%;
+  }
+
+  
+  #team {
+    padding-left: default;
+    padding-right: default;
+  }
+
+
+  .footer {
+    padding: 10%;
+  }
+
+  .companyBottomLinks,
+  .socialBottomLinks,
+  .signatureBottomLinks {
+    margin-top: 10%;
+    display: flex;
+    justify-content: left;
+  }
+
+
+ .subscribeCTA {
+  margin: 5%;
+  padding: 5%;
+  width: 90%;
+ }
+
+ .team-image-m {
+  height: 210px !important;
+ }
+
+ .team-image {
+  height: fit-content !important;
+ }
+
+ .team-profile-content {
+   margin-top: 0% !important;
+ }
+
+ .banner-content-container {
+  display: grid;
+   gap: 15px
+ }
+
+}
+
+
