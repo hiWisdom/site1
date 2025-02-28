@@ -14,23 +14,7 @@ const Hero2 = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-
-  // const [currentText, setCurrentText] = useState("Business");
-
-  // useEffect(() => {
-  //   const textOptions = ["Business", "Startup"];
-  
-  //   const interval = setInterval(() => {
-  //     setCurrentText(prevText => {
-  //       const nextIndex = (textOptions.indexOf(prevText) + 1) % textOptions.length;
-  //       return textOptions[nextIndex];
-  //     });
-  //   }, 2000); // Change every 2 seconds
-  
-  //   return () => clearInterval(interval); // Cleanup the interval on unmount
-  // }, []);
-  
-
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -83,8 +67,27 @@ const Hero2 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-          className="relative w-full h-screen flex flex-col items-center justify-center text-center text-white px-4 lg:my-10 hero-section"
+          // className="relative w-full h-screen flex flex-col items-center justify-center text-center text-white px-4 lg:my-10 hero-section"
+          className={`relative w-full h-screen flex flex-col items-center justify-center text-center text-white px-4 lg:my-10 hero-section ${
+            imageLoaded ? "image-loaded" : ""
+          }`}
+          style={{
+            backgroundColor: "#1a1a1a", // Fallback background color
+            backgroundImage: imageLoaded ? `url('/assets/images/hero/hero-7.svg')` : "none",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
+          {/* Next.js Optimized Image */}
+          <Image
+            src="/assets/images/hero/hero-7.svg"
+            alt="Hero Background"
+            layout="fill"
+            objectFit="cover"
+            priority
+            onLoadingComplete={() => setImageLoaded(true)}
+            className="hidden" // Hide the actual img element since we use bg-image
+          />
         <motion.div
           className="lg:h-full grid gap-5 hero-main"
           initial={{ opacity: 0, y: 50 }}

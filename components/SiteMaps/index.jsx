@@ -1,7 +1,7 @@
 "use client";
 //navigation links/sitemaps
 export const navLinks = [
-    { name: "Home", url: "#about" },
+    { name: "Home", url: "/" },
     { name: "About", url: "#about" },
     { name: "Services", url: "#services" },
     { name: "Portfolios", url: "#portfolios" },
@@ -14,7 +14,7 @@ export const FooterLinks = {
 
   company: [
       { name: "About", url: "#about" },
-      { name: "Products & Services", url: "#products" },
+      { name: "Products & Services", url: "#services" },
       // { name: "Testimonials", url: "#whychoosingus" },
       { name: "FAQ", url: "#faq" },
       { name: "Why Us", url: "#whychoosingus" },

@@ -11,14 +11,20 @@ const Portfolio = () => {
 
 
 
-    <div className='flex flex-col' id='products'>
+    <div className='flex flex-col' id='portfolios'>
 
         <div className=''>
             
             <div className=''>
 
                 <div className='mx-auto pt-10 w-fit'>
-                    <h1 className='text-[28px] lg:text-[48px] font-extrabold' style={{fontFamily:"AvenirBold"}}>Our Business Portfolio</h1>
+                    <h1 
+                        className='text-[28px] lg:text-[48px] font-extrabold' 
+                        style={{fontFamily:"AvenirBold"}}
+                        id='portfolios'
+                    >
+                        Our Business Portfolio
+                    </h1>
                 </div>
 
                 <div className='w-[92%] mx-auto pb-6'>

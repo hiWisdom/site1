@@ -21,7 +21,7 @@ const About = () => {
       {/* <p className="lg:text-[16px] font-medium text-[14px] text-primary">We are good at what we do</p> */}
         
       <div className="lg:w-[691px] lg:w-[90%]">
-        <h1 className="lg:text-[48px] text-[24px]" style={{fontFamily:"AvenirBold"}}>About Us</h1>
+        <h1 className="lg:text-[48px] text-[24px] about" style={{fontFamily:"AvenirBold"}}>About Us</h1>
         
         <p className="text-[15px] text-justify">
       

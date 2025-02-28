@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       </div>
     
-      <div className="flex lg:flex-row items-center lg:items-start justify-between mx-auto nine20" id="products">
+      <div className="flex lg:flex-row items-center lg:items-start justify-between mx-auto nine20" id="portfolios">
         <Portfolio/>
       </div>
     </>

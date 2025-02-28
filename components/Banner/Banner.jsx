@@ -67,7 +67,7 @@ import { motion } from "framer-motion";
                 {/* Dynamic Title */}
                 <h1
                   className={`relative m-auto  w-fit ${
-                    titleColor ? "" : "dark:text-white text-black"
+                    titleColor ? "" : " text-black"
                   }`}
                   style={{
                     color: titleColor || undefined, // Default if value not provided
@@ -85,7 +85,7 @@ import { motion } from "framer-motion";
                 {/* Dynamic Caption */}
                 <p
                   className={`relative m-auto text-[15px] lg:text-justify leading-6 ${
-                    captionColor ? "" : "dark:text-white text-black"
+                    captionColor ? "" : " text-black"
                   }`}
                   style={{
                     color: captionColor || undefined, // Default if value not provided
@@ -99,7 +99,7 @@ import { motion } from "framer-motion";
               {list && list.length > 0 && (
                 <ul className="list-disc list-inside pb-3">
                   {list.map((item, index) => (
-                  <li key={index} className="flex items-center space-x-3 dark:text-white" style={{lineHeight:'2rem'}}>
+                  <li key={index} className="flex items-center space-x-3 " style={{lineHeight:'2rem'}}>
                     {/* <CheckCircleOutline className="text-primary w-6 h-6" /> Custom Icon */}
                     <span>{item}</span>
                   </li>
