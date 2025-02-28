@@ -205,7 +205,7 @@ html, body {
 
 
 /*1920*1080*/
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1620px) {
 
 
   .headertext {
@@ -288,13 +288,13 @@ html, body {
     
 } 
 
-@media screen and (min-width: 1720px) {
+/* @media screen and (min-width: 1720px) {
 
   .hero-text {
     line-height: 1.7em
   }
   
-} 
+}  */
 
 @media screen and (max-width: 800px) {
 
