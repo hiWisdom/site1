@@ -10,18 +10,19 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full lg:h-[90px] bg-white shadow-md z-50">
+    <header className="fixed w-full lg:h-[73px] bg-white shadow-md z-50">
       <nav className="container mx-auto flex justify-between items-center container-1420">
         {/* Site Logo */}
-        <div className="flex justify-center items-center text-xl font-bold text-blue-600 p-2 ">
+        <div className="flex justify-center items-center text-xl font-bold text-blue-600 p-1 ">
           <Link href="/">
             <Image 
               src={"/logo.svg"} 
-              width={80} 
-              height={60} 
+              width={1000} 
+              height={1000}
               alt="HeelHeid-Logo" 
               className="heelHeid-Logo "
               priority
+              id="logo"
             />
           </Link>
         </div>
@@ -49,7 +50,7 @@ const Header = () => {
 
         {/* Navigation Links */}
         <div
-          className={` gap-[20px] absolute left-0 w-fit bg-white md:relative md:space-y-0 md:flex md:p-0 md:shadow-none md:top-auto transition-all duration-300 ease-in-out ${
+          className={`gap-[20px] absolute left-0 w-fit bg-white md:relative md:space-y-0 md:flex md:p-0 md:shadow-none md:top-auto transition-all duration-300 ease-in-out ${
             menuOpen ? "top-[4.3em] block w-full py-4" : "top-[-100%] hidden"
           }`}
         >

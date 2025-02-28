@@ -84,7 +84,7 @@ import { motion } from "framer-motion";
               >
                 {/* Dynamic Caption */}
                 <p
-                  className={`relative font-medium m-auto  ${
+                  className={`relative m-auto text-[15px] lg:text-justify leading-6 ${
                     captionColor ? "" : "dark:text-white text-black"
                   }`}
                   style={{

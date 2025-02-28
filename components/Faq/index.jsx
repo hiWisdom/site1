@@ -36,7 +36,7 @@ const FAQs = () => {
       id='faq'
     >
       <div className="m-auto leading-[3rem]">
-        <p>We are good at what we do</p>
+        {/* <p>We are good at what we do</p> */}
         <h1 className='text-center text-3xl md:text-5xl font-bold tracking-wide'>FAQ</h1>
       </div>
 
@@ -59,10 +59,10 @@ const FAQs = () => {
 
       <div className="m-auto leading-[3rem]">
         <button
-          className="w-[186px] flex border border-primary px-3 rounded-[8px] shadow-lg justify-evenly transform transition-transform duration-300 ease-in-out hover:scale-105"
+          className="w-[140px] flex border border-primary px-3 rounded-[8px] shadow-lg justify-evenly transform transition-transform duration-300 ease-in-out hover:scale-105"
           onClick={toggleShowAll}
         >
-          <p className="font-bold text-primary">{showAll ? "See less projects" : "See all projects"}</p>
+          <p className="font-bold text-primary">{showAll ? "See less" : "See all"}</p>
 
           <Image
             src={"assets/icons/faq-see-all-projects.svg"} // Change icon dynamically

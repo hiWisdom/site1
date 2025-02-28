@@ -37,7 +37,7 @@ const SubscribeCTA = () => {
     <>
       {/* <!-- ===== SubscribeCTA Start ===== --> */}
       {/* <section className="overflow-hidden px-4 md:px-8 2xl:px-0 py-25"> */}
-      <section className="lg:my-[6em] mx-10">
+      <section className="my-5 lg:my-[6em] mx-[4%]">
         {/* <div className="mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#DEE7FF] to-[#f4710f] px-7.5 py-12.5 md:px-12.5 xl:px-17.5 xl:py-0"> */}
           {/* <div className="gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0  flex"> */}
           {/* <div className="w-fit mx-auto bg-primary rounded-[32px] flex flex-col lg:flex-row nine20 lg:p-20 p-4 bg-gradient-to-r from-[#E86512] to-[#f4710f] "> */}
@@ -75,9 +75,6 @@ const SubscribeCTA = () => {
             >
 
                 <div>
-                    <p className="relative text-white">
-                        Join our Newsletter!
-                    </p>
 
                     <h1 
                         className="relative text-4xl lg:text-7xl text-white"
@@ -85,6 +82,10 @@ const SubscribeCTA = () => {
                     >
                     Be Exclusive!
                     </h1>
+                    
+                    <p className="relative text-white">
+                        Join our Newsletter.
+                    </p>
                 </div>
               
             </motion.div>
@@ -107,17 +108,19 @@ const SubscribeCTA = () => {
               viewport={{ once: true }}
               className="animate_right lg:w-1/2 m-auto subscribeCTA"
             >
-              <div className="m-auto grid gap-[3em]">
+              <div className="m-auto grid gap-[2em]">
 
-                <h1 className="text-white text-[20px]">
-                    Stay ahead of the curve with our weekly newsletter.  
-                </h1>
+                <div className="grid gap-[1em]">
+                  <h1 className="text-white text-[18px] font-extrabold">
+                      Stay ahead of the curve with our weekly newsletter.  
+                  </h1>
 
-                <p className="text-white">
-                    Get exclusive updates on, new acquisition opportunities, Job openings for talented team members, Insider information on upcoming events, Behind-the-scenes insights into our company's journey, challenges, and successes
-                </p>
+                  <p className="text-white">
+                      Get exclusive updates on, new acquisition opportunities, Job openings for talented team members, Insider information on upcoming events, Behind-the-scenes insights into our company's journey, challenges, and successes
+                  </p>
+                </div>
 
-                <form onSubmit={handleSubscribe} className="flex items-center bg-gray-100 h-14 lg:w-[433px] rounded-lg">
+                <form onSubmit={handleSubscribe} className="flex items-center bg-gray-100 h-14 lg:w-[390px] rounded-lg">
                     <input
                         type="email"
                         placeholder="Your email..."

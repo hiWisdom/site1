@@ -101,7 +101,7 @@ const Hero2 = () => {
           >
               <div className='hero-text-container my-auto'>
 
-                <h1 className="lg:text-[54px] text-1xl font-extrabold hero-text" style={{ fontFamily: 'AvenirBold'}}>
+                <h1 className="lg:text-[40px] text-1xl font-extrabold hero-text" style={{ fontFamily: 'AvenirBold'}}>
                   We are Globally...
                   <div className="flex justify-center gap-2 block text-white">
 
@@ -113,10 +113,10 @@ const Hero2 = () => {
                      <motion.div
                     // key={currentText} // Unique key to trigger animation on text change
                     initial={{ rotateY: 90, opacity: 0 }} // Initial state of the animation (off-screen)
-                    animate={{ rotateY: 0, opacity: 1, color: '#f7cbb0' }} // Final state (visible and flipped)
+                    animate={{ rotateY: 0, opacity: 1, color: '#fff' }} // Final state (visible and flipped)
                     exit={{ rotateY: -90, opacity: 0 }} // Exit animation (flip out)
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    className="lg:text-[54px] text-1xl font-extrabold hero-text"
+                    className="lg:text-[40px] text-1xl font-extrabold hero-text"
                     >
                       <HeroTypeWriter/>
                     </motion.div>

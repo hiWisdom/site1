@@ -31,7 +31,7 @@ const TeamImage = ({ team }) => {
               className="lg:h-auto rounded-t-[15px] lg:rounded-[24px]"
             />
 
-            <div className="bg-black relative -mt-[7em] left-1/2 -translate-x-1/2 h-[119px] grid gap-2 rounded-b-[15px] lg:rounded-b-[24px] team-profile-content">
+            <div className="bg-black hover:bg-primary relative -mt-[7em] left-1/2 -translate-x-1/2 h-[119px] grid gap-2 rounded-b-[15px] lg:rounded-b-[24px] team-profile-content">
               <div className="my-auto ml-5 grid gap-2">
                 <div className="w-fit gap-2 my-auto flex justify-between">
                   <div>
@@ -39,7 +39,7 @@ const TeamImage = ({ team }) => {
                   </div>
 
                   <button
-                    className="my-auto bg-white hover:bg-primary rounded-full"
+                    className="my-auto bg-white hover:bg-black rounded-full"
                     onClick={() => {
                       setSelectedMember(item);
                       setModalOpen(true);
@@ -70,7 +70,7 @@ const TeamImage = ({ team }) => {
       {/* About Modal */}
       {modal && selectedMember && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg overflow-hidden lg:w-[1199px] w-full lg:h-[90%] h-[90%] relative about-modal">
+          <div className="bg-white rounded-lg overflow-hidden lg:w-[1199px] w-full lg:h-[100%] h-[90%] relative about-modal">
             {/* Close Button */}
             <button
               className="absolute lg:right-[1em] right-4 text-black hover:text-primary hover:font-extrabold lg:text-5xl text-4xl"
@@ -80,15 +80,15 @@ const TeamImage = ({ team }) => {
             </button>
 
             {/* Show only the selected team member */}
-            <div className="relative w-[90%] lg:h-[569px] mx-auto rounded-lg my-10 flex flex-col gap-3">
+            <div className="relative w-[90%] lg:h-[569px] mx-auto rounded-lg my-5 flex flex-col gap-3">
               <div>
                 <p className="font-extrabold text-[24px]">{selectedMember.title}</p>
               </div>
               <div>
                 <p className="font-extrabold text-primary">{selectedMember.description}</p>
               </div>
-              <div className=" overflow-scroll">
-                <p className="whitespace-pre-wrap text-justify  leading-relaxed">{selectedMember.about}</p>
+              <div className="overflow-auto media-overflow">
+                <p className="whitespace-pre-wrap text-[15px] text-justify">{selectedMember.about}</p>
               </div>
             </div>
           </div>

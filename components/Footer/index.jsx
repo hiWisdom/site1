@@ -52,11 +52,11 @@ const Footer = () => {
 
 const Section = ({ title, links }) => (
     <AnimatedDiv className="w-56 flex-1 min-w-48">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">{title}</h2>
+        <h2 className="text-1xl font-semibold text-gray-800 mb-4">{title}</h2>
         <ul className="text-gray-600 space-y-2">
             {links.map((link, index) => (
                 <li key={index}>
-                    <a href={link.url} className="hover:text-primary transition duration-300">{link.name}</a>
+                    <a href={link.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{link.name}</a>
                 </li>
             ))}
         </ul>
@@ -65,12 +65,12 @@ const Section = ({ title, links }) => (
 
 const ContactSection = ({ contacts }) => (
     <AnimatedDiv className="w-56 flex-1 min-w-48">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Contact</h2>
+        <h2 className="text-1xl font-semibold text-gray-800 mb-4">Contact</h2>
         <ul className="text-gray-600 space-y-2">
             {contacts.map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
-                    <Image src={item.iconPath || ""} width={20} height={20} alt="Contact-Icons" className="h-6 w-auto h-auto" />
-                    <a href={item.url} className="hover:text-primary transition duration-300">{item.name}</a>
+                    <Image src={item.iconPath || ""} width={20} height={20} alt="Contact-Icons" className="h-[14px] w-auto h-auto" />
+                    <a href={item.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{item.name}</a>
                 </li>
             ))}
         </ul>
@@ -79,7 +79,7 @@ const ContactSection = ({ contacts }) => (
 
 const NewsletterSection = ({ email, setEmail, handleSubscribe, loading, message, error }) => (
     <AnimatedDiv className="flex-1 min-w-48">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Join Our Newsletter</h2>
+        <h2 className="text-1xl font-semibold text-gray-800 mb-4">Join Our Newsletter</h2>
         <form onSubmit={handleSubscribe} className="flex items-center bg-gray-100 h-14 rounded-lg">
             <input
                 type="email"
@@ -103,17 +103,17 @@ const FooterBottom = ({ currentYear }) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="px-6 border-t border-gray-300 mt-6 py-6 flex flex-col sm:flex-row justify-between container mx-auto text-gray-600">
+        <div className="border-t border-gray-300 mt-6 py-6 flex flex-col sm:flex-row justify-between container mx-auto text-gray-600 ">
 
-            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto sm:order-last">
+            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto sm:order-last ">
 
-                <div className="flex gap-4 sm:gap-6 lg:items-center lg:justify-center companyBottomLinks">
+                <div className="flex gap-4 sm:gap-6 lg:items-center lg:justify-center companyBottomLinks ">
                     {FooterLinks.footerBottom.map((link, index) => (
-                        <a key={index} href={link.url} className="hover:text-primary">{link.name}</a>
+                        <a key={index} href={link.url} className="text-[14px] hover:text-primary">{link.name}</a>
                     ))}
                 </div>
 
-                <div className="flex space-x-4 items-center socialBottomLinks">
+                <div className="flex space-x-4 items-center socialBottomLinks  my-auto">
                     {FooterLinks.social.map((social, index) => (
                         <a
                             key={index}
@@ -127,7 +127,7 @@ const FooterBottom = ({ currentYear }) => {
                                 width={20}
                                 height={20}
                                 alt="Social Icon"
-                                className="w-5 h-5"
+                                className="w-[15px] h-[15px]"
                             />
                         </a>
                     ))}
@@ -135,8 +135,8 @@ const FooterBottom = ({ currentYear }) => {
 
             </div>
 
-            <div className="flex gap-4 items-center justify-center sm:justify-start signatureBottomLinks">
-                <p className="text-center sm:text-left">© {currentYear} Heelheid. All rights reserved.</p>
+            <div className="flex gap-4 items-center justify-center sm:justify-start signatureBottomLinks ">
+                <p className="text-[14px] text-center sm:text-left">© {currentYear} Heelheid Business Acqusition & Management Company. All Rights Reserved.</p>
             </div>
 
         </div>

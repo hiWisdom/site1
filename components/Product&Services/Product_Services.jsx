@@ -28,19 +28,23 @@ const Product_Services = ({product_services}) => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className="animate_top w-fit mb-9"
+            className="animate_top w-fit mb-4"
             id="services-text"
         >
 
-        <div>
+        <div
+            className='lg:w-[85%]'
+        >
 
-            <p className="lg:text-[16px] font-bold text-[14px] leading-[2em] services-text-title-cite">We provide the best services</p>
+            {/* <p className="lg:text-[16px] font-bold text-[14px] leading-[2em] services-text-title-cite">We provide the best services</p> */}
                 
             <h1 className="lg:text-[48px] text-[24px] leading-[2em] services-text-title" style={{fontFamily:"AvenirBold"}}>Our Services</h1>
 
+            
+            <p className="text-[15px] services-text-description text-justify">At Heelheid, we empower entrepreneurs and businesses to achieve sustainable growth and success. Our services are designed to support businesses at various stages of their journey.</p>
+
         </div>
 
-        <p className="text-[16px] services-text-description">At Heelheid, we empower entrepreneurs and businesses to achieve sustainable growth and success. Our services are designed to support businesses at various stages of their journey.</p>
 
         </motion.div>
 
@@ -81,11 +85,11 @@ const Product_Services = ({product_services}) => {
                         </div>
 
                         <div className='mb-4 mt-3'>
-                            <p className='lg:text-[24px] text-[18px] font-bold text-white services-title'>{item.title}</p>
+                            <p className='lg:text-[22px] text-[18px] font-bold text-white services-title'>{item.title}</p>
                         </div>
 
                         <div>
-                            <p className='text-[16px] text-white services-description'>{item.description}</p>
+                            <p className='text-[15px] text-white services-description'>{item.description}</p>
                         </div>
                         
                     </motion.div>

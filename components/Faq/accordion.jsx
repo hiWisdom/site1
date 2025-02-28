@@ -9,7 +9,7 @@ const Accordion = ({accordionId, question, answer, isOpen, toggleAccordion,}) =>
 
 
     <div
-      className={`flex m-auto w-full duration-300 flex-col py-10 px-5 my-4 justify-center items-start rounded-lg ${
+      className={`lg:w-[70%] flex m-auto w-full duration-300 flex-col py-10 px-5 my-4 justify-center items-start rounded-lg ${
         isOpen ? "h-auto bg-[#E86512] text-white" : "h-[132px] bg-white text-black"
       }`}
     >

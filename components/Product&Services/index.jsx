@@ -8,7 +8,7 @@ export default function Product_ServicesPage() {
   return (
     // <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between mx-auto bg-primary mt-7 nine20" id="products">
     <div
-    className='container flex flex-col lg:flex-row bg-[#FDF2EB] justify-between lg:items-start w-full'
+    className='flex flex-col lg:flex-row bg-[#FDF2EB] justify-between lg:items-start w-full'
     id='services'
   >
         

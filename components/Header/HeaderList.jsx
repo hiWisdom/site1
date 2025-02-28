@@ -38,16 +38,16 @@ const HeaderList = ({ links }) => {
 
   return (
 
-  <ul className="flex flex-col md:flex-row bg-white w-full md:w-auto md:shadow-none shadow-sm p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6 lg:justify-center lg:items-center">
+  <ul className="flex flex-col md:flex-row bg-white w-full md:w-auto md:shadow-none shadow-sm p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6 lg:justify-center lg:items-center ">
 
     {links.map(({ name, url, iconPath }) => (
       <li key={name} className="flex h-full py-2 ">
         <a
           href={url}
           // className="flex items-center hover:text-primary transition duration-300 px-5"
-          className={`flex items-center transition duration-300 px-5  lg:text-[16px] hover:text-primary hover:font-extrabold ${
+          className={`headertext flex items-center transition duration-300 px-5 lg:text-[15px] hover:text-primary hover:font-extrabold ${
             activeSection === url.replace("#", "")
-            ? "text-primary font-bold lg:text-[20px]"
+            ? "text-primary font-bold lg:text-[16px]"
             : activeSection ? "text-black" : "text-black"
           }`}
         >
@@ -59,7 +59,7 @@ const HeaderList = ({ links }) => {
     
     {/* Call-to-Action Button */}
       <motion.button
-        className="lg:bg-primary hover:bg-black text-white font-semibold py-2 px-5 lg:rounded-lg lg:shadow-md mt-4 flex lg:gap-3 lg:w-full lg:h-[58px]"
+        className="lg:bg-primary hover:bg-black text-white font-semibold py-2 px-5 lg:rounded-lg lg:shadow-md mt-4 flex lg:gap-3 lg:w-full lg:h-[40px]"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         href="#join-community"

@@ -1,10 +1,10 @@
 "use client";
 //navigation links/sitemaps
 export const navLinks = [
+    { name: "Home", url: "#about" },
     { name: "About", url: "#about" },
-    // { name: "Products", url: "#products" },
     { name: "Services", url: "#services" },
-    { name: "Team", url: "#team" },
+    { name: "Portfolios", url: "#portfolios" },
     { name: "Contact", url: "#contact" },
   ];
 
@@ -26,7 +26,7 @@ export const FooterLinks = {
       { name: "Explore", url: "#explore" },
       { name: "Terms & Condition", url: "/terms-of-use" },
       { name: "Privacy Policy", url: "/privacy-policy" },
-      { name: "Sitemap", url: "https://heelheidbusiness.com/sitemap.html" },
+
   ],
 
   contact: [
@@ -50,8 +50,8 @@ export const FooterLinks = {
 
   footerBottom: [
     { name: "Terms", url: "/terms-of-use" },
-      { name: "Privacy", url: "/privacy-policy" },
-    //   { name: "Contact", url: "#" },
+    { name: "Privacy", url: "/privacy-policy" },
+    { name: "Sitemap", url: "https://heelheidbusiness.com/sitemap.html" },
   ],
 
   social: [

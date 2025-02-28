@@ -33,7 +33,7 @@ export default function Banner() {
         `,
         // list: ["Nutritional deficiencies,","Chronic bloating and discomfort,","Increased risk of colon cancer,","Digestive disorders such as IBS and GERD.",],
         image: "/assets/images/banner/foub-fs.svg",
-        link: "/#",
+        link: "https://calendly.com/heelheidbusiness-p938/fundraisingcall",
         linkCaption: "Schedule A Call To Setup Your Business Fundraising System",
         bgColor: "#ECECEC",
         }} 
@@ -53,7 +53,7 @@ export default function Banner() {
       />
 
       <BannerCard banner={{
-        title: "Online Professionals Agency",
+        title: "Online Professionals Coaching Agency",
         caption: `
             Online Professionals Agency addresses the challenge faced by many consultants, coaches, and entrepreneurs who offer valuable solutions to specific problems, but struggle to gain visibility and reach their ideal market, limiting their opportunities to offer their services and generate income. We overcome this hurdle by signing these professionals as "Signed Professionals" under our agency, supporting them in refining and developing their offers to ensure market fit, and promoting and marketing them to attract clients, thereby enabling them to focus on delivering exceptional services while we drive revenue growth and financial asset building through our business development and client acquisition efforts.
         `,
