@@ -66,7 +66,7 @@ import { motion } from "framer-motion";
               >
                 {/* Dynamic Title */}
                 <h1
-                  className={`relative m-auto  w-fit ${
+                  className={`relative m-auto  w-fit text-[15px] lg:text-[25px] ${
                     titleColor ? "" : " text-black"
                   }`}
                   style={{
@@ -144,6 +144,7 @@ import { motion } from "framer-motion";
                   {link && (
                     <Link
                       href={link}
+                      target="_blank" 
                       className="inline-flex items-center rounded-lg px-4 py-2 font-medium m-auto bg-primary hover:bg-black gap-1 my-10"
                     >
                       <div className="my-auto">

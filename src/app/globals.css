@@ -110,13 +110,13 @@ html, body {
               linear-gradient(180deg, #E86512, #f4710f);
 } */
 
-.gradient-bg {
+/* .gradient-bg {
   background: 
       radial-gradient(circle at left, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
       radial-gradient(circle at right, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
       linear-gradient(90deg, #E86512, #f4710f);
   border-radius: 32px;
-}
+} */
 
 /* .custom-bg {
   position: relative;
@@ -161,7 +161,8 @@ html, body {
   top: -10%;
   left: -15%;
   border-radius: 15rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(to right,  rgba(255, 255, 255, 0.15), #D35D13);
+  
 }
 
 /* Left Side - Child Circle */
@@ -173,7 +174,7 @@ html, body {
   top: 0%;
   left: -15%;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: #D35D13;
 }
 
 /* Right Side - Large Circle */
@@ -184,9 +185,8 @@ html, body {
   top: -10%;
   right: -20%;
   border-radius: 15rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),#D35D13, #D35D13,#D35D13, #D35D13,#D35D13, #D35D13);
 }
-
 
 
 
@@ -204,8 +204,10 @@ html, body {
 }
 
 
-/*1920*1080*/
-@media screen and (min-width: 1620px) {
+/*
+
+*/
+@media screen and (min-width: 1600px) {
 
 
   .headertext {
@@ -288,14 +290,10 @@ html, body {
     
 } 
 
-/* @media screen and (min-width: 1720px) {
 
-  .hero-text {
-    line-height: 1.7em
-  }
+/*
   
-}  */
-
+*/
 @media screen and (max-width: 800px) {
 
   .hero-section {
@@ -410,10 +408,28 @@ html, body {
     margin-top: 15px
   }
 
-  /* .media-overflow {
-    overflow: scroll !important;
-    background-color: #E86512 !important;
-  } */
+  
+  /* Left Side - Parent Circle */
+  .custom-bg::before {
+    display: none;
+  }
+  
+  /* Left Side - Child Circle */
+  .custom-bg::after {
+    display: none;
+  }
+  
+  /* Right Side - Large Circle */
+  .right-circle {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  margin: auto;
+  top: -10%;
+  right: 0%;
+  border-radius: 15rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),rgba(255, 255, 255, 0.042),#D35D13, #D35D13,#D35D13, #D35D13,#D35D13, #D35D13);
+  }
 
 }
 

@@ -53,7 +53,7 @@ const SubscribeCTA = () => {
      
      >
 
-    <div className="right-circle" style={{zIndex:'-1'}}></div>
+    <div className="right-circle" ></div>
 
             <motion.div
               variants={{
@@ -108,7 +108,7 @@ const SubscribeCTA = () => {
               viewport={{ once: true }}
               className="animate_right lg:w-1/2 m-auto subscribeCTA"
             >
-              <div className="m-auto grid gap-[2em]">
+              <div className="relative m-auto grid gap-[2em]">
 
                 <div className="grid gap-[1em]">
                   <h1 className="text-white text-[18px] font-extrabold">

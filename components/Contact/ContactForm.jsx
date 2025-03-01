@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 export default function ContactForm() {
   const [countries, setCountries] = useState([]); //countries variables
   const [text, setText] = useState(""); //text variables
@@ -43,19 +44,19 @@ export default function ContactForm() {
             name: country.name.common,
           }));
         setCountries(countryData);
-        // Set Nigeria as the default selected country
+        // Set default selected country
         const rwanda = countryData.find((c) => c.code === "+250");
         if (rwanda) setSelectedCountry(rwanda);
       });
   }, []);
 
-  //handleCountryChange function
+  // CountryChange function
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
     setShowDropdown(false);
   };
 
-  //textarea function 
+  // textarea function 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -124,24 +125,24 @@ export default function ContactForm() {
 
     <div className="w-fit m-auto p-2">
 
-      <div className="w-fit mb-9 ">
+      <div className="w-fit mb-5">
 
-        <h1 className="text-[48px] leading-[2cm] font-bold tracking-wide" style={{fontFamily:"AvenirBold"}}>Contact</h1>
+        <h1 className="text-[45px] leading-[2cm] font-bold tracking-wide" style={{fontFamily:"AvenirBold"}}>Contact</h1>
 
-        <p className="lg:text-[16px] ">Our friendly team would love to hear from you.</p>
+        <p className="lg:text-[15px] ">Our friendly team would love to hear from you.</p>
 
       </div>
 
-      <form className="flex flex-col space-y-4 w-full max-w-lg " onSubmit={handleSubmit}>
+      <form className="flex flex-col space-y-1 w-full max-w-lg " onSubmit={handleSubmit}>
 
           <div className="flex gap-2">
 
             <div>
-              <label>First name</label>
+              <label className="lg:text-[15px]">First name</label>
               <input
                 type="text"
                 placeholder="Elizabeth"
-                className="flex-1 p-2 border rounded-md focus:ring focus:outline-none w-full"
+                className="flex-1 p-2 border rounded-md focus:ring focus:outline-none w-full lg:text-[15px]"
                 name="firstName"
                 onChange={handleChange}
                 required
@@ -149,11 +150,11 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label>Last name</label>
+              <label className="lg:text-[15px]">Last name</label>
               <input
                 type="text"
                 placeholder="Last name"
-                className="flex-1 p-2 border rounded-md focus:ring focus:outline-none w-full"
+                className="flex-1 p-2 border rounded-md focus:ring focus:outline-none w-full lg:text-[15px]"
                 name="lastName"
                 onChange={handleChange}
                 required
@@ -163,11 +164,11 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label>Email</label>
+            <label className="lg:text-[15px]">Email</label>
             <input
               type="email"
               placeholder="you@company.com"
-              className="w-full p-2 border rounded-md focus:ring focus:outline-none"
+              className="w-full p-2 border rounded-md focus:ring focus:outline-none lg:text-[15px]"
               name="email"
               onChange={handleChange}
               required
@@ -175,7 +176,7 @@ export default function ContactForm() {
           </div>
           
           <div>
-            <label>Phone Number</label>
+            <label className="lg:text-[15px]">Phone Number</label>
             <div className="flex items-center border rounded-md p-2 space-x-2">
               <div className="relative">
                 <button
@@ -193,7 +194,7 @@ export default function ContactForm() {
                     className="w-6 h-4 rounded-md"
                   />
                   
-                  <span className="text-sm font-medium">{selectedCountry.code}</span>
+                  <span className="lg:text-[15px]">{selectedCountry.code}</span>
                 </button>
 
                 {showDropdown && (
@@ -201,7 +202,7 @@ export default function ContactForm() {
                   <input
                     type="text"
                     placeholder="Search country..."
-                    className="w-full p-2 border-b"
+                    className="w-full p-2 border-b lg:text-[15px]"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   />
@@ -230,7 +231,7 @@ export default function ContactForm() {
                 <input
                   type="tel"
                   placeholder="8143516481"
-                  className="flex-1 p-2 focus:ring focus:outline-none"
+                  className="flex-1 p-2 focus:ring focus:outline-none lg:text-[15px]"
                   name="phone"
                   onChange={handleChange}
                   required
@@ -240,11 +241,11 @@ export default function ContactForm() {
             
           <div>
 
-            <label>Message</label>
+            <label className="lg:text-[15px]">Message</label>
             
             <textarea
               placeholder="Type your text here..."
-              className="w-full p-2 border rounded-md focus:ring focus:outline-none h-24 resize-none"
+              className="w-full p-2 border rounded-md focus:ring focus:outline-none h-24 resize-none lg:text-[15px]"
               value={text}
               name="message"
               onChange={handleTextChange}
@@ -261,15 +262,15 @@ export default function ContactForm() {
           <input
             type="checkbox"
             id="privacy"
-            className="rounded"
+            className="rounded lg:text-[15px]"
             checked={isChecked}
             onChange={() => setIsChecked(!isChecked)}
           />
           <label
             htmlFor="privacy"
-            onClick={toggleModal} // Opens the modal on click
+            className="lg:text-[15px]"
           >
-            You agree to our friendly policy, <span className="hover:text-primary font-bold cursor-pointer">read privacy policy.</span>
+            You agree to our friendly policy, <Link className="hover:text-primary font-bold cursor-pointer lg:text-[15px]" target="_blank" href={"/privacy-policy"}>read privacy policy.</Link>
           </label>
           </div>
 
@@ -290,23 +291,7 @@ export default function ContactForm() {
       </form>
           
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white lg:w-1/2 p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-bold">Privacy Policy</h2>
-            <p className="mt-4">
-              Here is the detailed privacy policy content. (You can replace this with your actual policy text.)
-            </p>
-            <button
-              className="mt-4 bg-primary text-white p-2 rounded-md hover:bg-black"
-              onClick={toggleModal} // Close the modal
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+
 
     </div>
 

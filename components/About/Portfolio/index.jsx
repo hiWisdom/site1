@@ -13,22 +13,21 @@ const Portfolio = () => {
 
     <div className='flex flex-col' id='portfolios'>
 
-        <div className=''>
+        <div className='w-[90%] lg:w-full'>
             
-            <div className=''>
+            <div className='w-[90%] lg:w-full mx-auto'>
 
                 <div className='mx-auto pt-10 w-fit'>
                     <h1 
-                        className='text-[28px] lg:text-[48px] font-extrabold' 
+                        className='text-[20px] lg:text-[48px] font-extrabold' 
                         style={{fontFamily:"AvenirBold"}}
-                        id='portfolios'
                     >
                         Our Business Portfolio
                     </h1>
                 </div>
 
                 <div className='w-[92%] mx-auto pb-6'>
-                    <p className='text-center'>At Heelheid Business Acquisition and Management Company, we take a collaborative and supportive approach to investing. We work closely with our portfolio companies to provide strategic guidance, operational expertise, and access to netwrok or industry experts.  </p>
+                    <p className='text-center text-[13px]'>At Heelheid Business Acquisition and Management Company, we take a collaborative and supportive approach to investing. We work closely with our portfolio companies to provide strategic guidance, operational expertise, and access to netwrok or industry experts.  </p>
                 </div>
 
             </div>

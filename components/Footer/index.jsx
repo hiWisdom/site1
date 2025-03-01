@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FooterLinks } from "../SiteMaps";
 import { motion } from "framer-motion";
 
@@ -56,7 +57,7 @@ const Section = ({ title, links }) => (
         <ul className="text-gray-600 space-y-2">
             {links.map((link, index) => (
                 <li key={index}>
-                    <a href={link.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{link.name}</a>
+                    <Link href={link.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{link.name}</Link>
                 </li>
             ))}
         </ul>
@@ -70,7 +71,7 @@ const ContactSection = ({ contacts }) => (
             {contacts.map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
                     <Image src={item.iconPath || ""} width={20} height={20} alt="Contact-Icons" className="h-[14px] w-auto h-auto" />
-                    <a href={item.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{item.name}</a>
+                    <Link href={item.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{item.name}</Link>
                 </li>
             ))}
         </ul>
@@ -109,15 +110,23 @@ const FooterBottom = ({ currentYear }) => {
 
                 <div className="flex gap-4 sm:gap-6 lg:items-center lg:justify-center companyBottomLinks ">
                     {FooterLinks.footerBottom.map((link, index) => (
-                        <a key={index} href={link.url} className="text-[14px] hover:text-primary">{link.name}</a>
+                        <Link 
+                            key={index} 
+                            href={link.url} 
+                            className="text-[14px] hover:text-primary"
+                            target="_blank"
+                        >
+                            {link.name}
+                        </Link>
                     ))}
                 </div>
 
                 <div className="flex space-x-4 items-center socialBottomLinks  my-auto">
                     {FooterLinks.social.map((social, index) => (
-                        <a
+                        <Link
                             key={index}
                             href={social.url}
+                            target="_blank"
                             className="text-gray-600 hover:text-primary text-2xl transition duration-300"
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
@@ -129,7 +138,7 @@ const FooterBottom = ({ currentYear }) => {
                                 alt="Social Icon"
                                 className="w-[15px] h-[15px]"
                             />
-                        </a>
+                        </Link>
                     ))}
                 </div>
 

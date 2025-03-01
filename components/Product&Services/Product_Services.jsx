@@ -50,50 +50,52 @@ const Product_Services = ({product_services}) => {
 
         <div className='lg:grid lg:grid-cols-2 gap-5' id="services-card">
             {product_services.map((item, index) => (
+ 
+                <motion.div 
+                    variants={{
+                    hidden: {
+                        opacity: 0,
+                        y: 50,
+                    },
+
+                    visible: {
+                        opacity: 1,
+                        y: 0,
+                    },
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
+                    
+                    viewport={{ once: true }}
+                    className="animate_top mx-3 services-box bg-primary w-[100%] py-5 px-2 rounded-lg lg:mb-0 mb-2"
+                    key={index}
+                >               
+                    {/* <div  className='bg-primary w-[100%] py-5 px-2 rounded-lg lg:mb-0 mb-2'> */}
+
+
+                    <div className='w-[50px] h-[50px] border rounded-full border-[#000]'>
+                        <Image
+                            src={item.image || null}
+                            width={100}
+                            height={100}
+                            alt={item.alt}
+                            className='w-50 h-50'
+                        />
+                        
+                    </div>
+
+                    <div className='mb-4 mt-3'>
+                        <p className='lg:text-[22px] text-[18px] font-bold text-white services-title'>{item.title}</p>
+                    </div>
+
+                    <div>
+                        <p className='text-[15px] text-white services-description'>{item.description}</p>
+                    </div>
+                        
+                {/* </div> */}
                 
-                <div key={index} className='bg-primary w-[100%] py-5 px-2 rounded-lg lg:mb-0 mb-2 services-box'>
-
-                    <motion.div 
-                        variants={{
-                        hidden: {
-                            opacity: 0,
-                            y: 50,
-                        },
-
-                        visible: {
-                            opacity: 1,
-                            y: 0,
-                        },
-                        }}
-                        initial="hidden"
-                        whileInView="visible"
-                        transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
-                        
-                        viewport={{ once: true }}
-                        className="animate_top mx-3"
-                    >
-
-                        <div className='w-[50px] h-[50px] border rounded-full border-[#000]'>
-                            <Image
-                                src={item.image || null}
-                                width={100}
-                                height={100}
-                                alt={item.alt}
-                                className='w-50 h-50'
-                            />
-                            
-                        </div>
-
-                        <div className='mb-4 mt-3'>
-                            <p className='lg:text-[22px] text-[18px] font-bold text-white services-title'>{item.title}</p>
-                        </div>
-
-                        <div>
-                            <p className='text-[15px] text-white services-description'>{item.description}</p>
-                        </div>
-                        
-                    </motion.div>
-                </div>
+                </motion.div>
             ))}
         </div>
 

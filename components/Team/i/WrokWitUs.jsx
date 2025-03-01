@@ -62,7 +62,7 @@ export default function WorkwithUs() {
                         <p className="text-white text-center font-extrabold">Send us an email</p>
                     </div>
                     
-                    <div className="border border-[white] bg-white px-4 py-3 mx-auto w-fit flex gap-2 rounded-lg">
+                    <div className="border border-[white] bg-white hover:bg-transparent px-4 py-3 mx-auto w-fit flex gap-2 rounded-lg">
 
                         <div className="cursor h-fit my-auto">
                             <Image
