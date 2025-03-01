@@ -127,9 +127,9 @@ export default function ContactForm() {
 
       <div className="w-fit mb-5">
 
-        <h1 className="text-[45px] leading-[2cm] font-bold tracking-wide" style={{fontFamily:"AvenirBold"}}>Contact</h1>
+        <h1 className="text-[x-large] lg:text-[45px] leading-[2cm] font-bold tracking-wide" style={{fontFamily:"AvenirBold"}}>Contact</h1>
 
-        <p className="lg:text-[15px] ">Our friendly team would love to hear from you.</p>
+        <p className="text-[small] lg:text-[15px]">Our friendly team would love to hear from you.</p>
 
       </div>
 
@@ -138,7 +138,7 @@ export default function ContactForm() {
           <div className="flex gap-2">
 
             <div>
-              <label className="lg:text-[15px]">First name</label>
+              <label className="text-[small] lg:text-[15px]">First name</label>
               <input
                 type="text"
                 placeholder="Elizabeth"
@@ -150,7 +150,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label className="lg:text-[15px]">Last name</label>
+              <label className="text-[small] lg:text-[15px]">Last name</label>
               <input
                 type="text"
                 placeholder="Last name"
@@ -164,7 +164,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="lg:text-[15px]">Email</label>
+            <label className="text-[small] lg:text-[15px]">Email</label>
             <input
               type="email"
               placeholder="you@company.com"
@@ -176,7 +176,7 @@ export default function ContactForm() {
           </div>
           
           <div>
-            <label className="lg:text-[15px]">Phone Number</label>
+            <label className="text-[small] lg:text-[15px]">Phone Number</label>
             <div className="flex items-center border rounded-md p-2 space-x-2">
               <div className="relative">
                 <button
@@ -194,7 +194,7 @@ export default function ContactForm() {
                     className="w-6 h-4 rounded-md"
                   />
                   
-                  <span className="lg:text-[15px]">{selectedCountry.code}</span>
+                  <span className="text-[small] lg:text-[15px]">{selectedCountry.code}</span>
                 </button>
 
                 {showDropdown && (
@@ -241,7 +241,7 @@ export default function ContactForm() {
             
           <div>
 
-            <label className="lg:text-[15px]">Message</label>
+            <label className="text-[small] lg:text-[15px]">Message</label>
             
             <textarea
               placeholder="Type your text here..."
@@ -268,9 +268,9 @@ export default function ContactForm() {
           />
           <label
             htmlFor="privacy"
-            className="lg:text-[15px]"
+            className="text-[small] lg:text-[15px]"
           >
-            You agree to our friendly policy, <Link className="hover:text-primary font-bold cursor-pointer lg:text-[15px]" target="_blank" href={"/privacy-policy"}>read privacy policy.</Link>
+            You agree to our friendly policy, <Link className="hover:text-primary font-bold cursor-pointer text-[small]  lg:text-[15px]" target="_blank" href={"/privacy-policy"}>read privacy policy.</Link>
           </label>
           </div>
 
@@ -285,9 +285,7 @@ export default function ContactForm() {
             
             {loading ? "Sending message..." : "Send message"}
           </button>
-          {/* {!isChecked && (
-            <p className="text-red-500 text-sm mt-2 text-center">You must agree to the privacy policy before proceeding.</p>
-          )} */}
+
       </form>
           
 

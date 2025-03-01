@@ -67,7 +67,6 @@ const Hero2 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-          // className="relative w-full h-screen flex flex-col items-center justify-center text-center text-white px-4 lg:my-10 hero-section"
           className={`relative w-full h-screen flex flex-col items-center justify-center text-center text-white px-4 lg:my-10 hero-section ${
             imageLoaded ? "image-loaded" : ""
           }`}
@@ -89,7 +88,7 @@ const Hero2 = () => {
             className="hidden" // Hide the actual img element since we use bg-image
           />
         <motion.div
-          className="lg:h-full grid gap-5 hero-main"
+          className="lg:h-fit grid gap-5  hero-main"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -100,12 +99,12 @@ const Hero2 = () => {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className='h-fit my-auto'
+            className='h-fit my-auto hero-heading-section '
           >
               <div className='hero-text-container my-auto'>
 
                 <h1 className="lg:text-[40px] text-1xl font-extrabold hero-text" style={{ fontFamily: 'AvenirBold'}}>
-                  We are Globally...
+                  We are Globally
                   <div className="flex justify-center gap-2 block text-white">
 
                     {/* <div>
@@ -142,7 +141,7 @@ const Hero2 = () => {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="hero-main-2 h-fit w-fit mx-auto"
+            className="hero-main-2 h-fit w-fit mx-auto "
           >
 
               <div className=''>

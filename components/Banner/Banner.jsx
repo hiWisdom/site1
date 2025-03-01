@@ -30,11 +30,10 @@ import { motion } from "framer-motion";
  return (
     <>
       {/* <!-- ===== CTA Start ===== --> */}
-      <section className="overflow-hidden mx-10">
+      <section className="overflow-hidden lg:mx-10">
       {/* Dynamic background color */}
-        {/* <div className="mx-auto rounded-lg bg-gradient-to-t from-primary to-primary px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0"> */}
         <div
-          className="mx-auto rounded-[24px] px-7.5 py-12.5 md:px-12.5 xl:px-17.5 xl:py-0 mb-10"
+          className="mx-auto lg:rounded-[24px] px-7.5 py-12.5 md:px-12.5 xl:px-17.5 xl:py-0 mb-10"
           style={{ backgroundColor: bgColor || "transparent" }} // Default if value not provided
         >
 
@@ -62,11 +61,11 @@ import { motion } from "framer-motion";
               className="lg:w-3/4 animate_left  grid"
             >
               <div
-                className="my-auto w-fit"
+                className="my-auto w-full lg:w-fit"
               >
                 {/* Dynamic Title */}
                 <h1
-                  className={`relative m-auto  w-fit text-[15px] lg:text-[25px] ${
+                  className={`relative m-auto  w-fit banner-dynamic-title ${
                     titleColor ? "" : " text-black"
                   }`}
                   style={{
@@ -84,7 +83,7 @@ import { motion } from "framer-motion";
               >
                 {/* Dynamic Caption */}
                 <p
-                  className={`relative m-auto text-[15px] lg:text-justify leading-6 ${
+                  className={`relative m-auto text-[15px] text-justify leading-6 banner-dynamic-caption ${
                     captionColor ? "" : " text-black"
                   }`}
                   style={{
@@ -114,41 +113,15 @@ import { motion } from "framer-motion";
                 className="my-auto "
               >
 
-                {/* {callToActionButtons.map((cta, index)=>(
-
-                  <div
-                    key={index}
-                  > */}
-
-                    {/* <Link
-                      href={link}
-                      className="inline-flex items-center rounded-lg px-4 py-4 font-medium m-auto bg-primary hover:bg-black gap-1"
-                      
-                    >
-                      <div className=" my-auto">
-                        <p className="text-white">{linkCaption} </p>
-                      </div>
-
-                      <div className=" my-auto">
-                        <Image
-                          width={15}
-                          height={15}
-                          src={linkIcon || "/assets/icons/arrow-up-right-01.svg"}
-                          alt="Arrow"
-                          className="dark:block"
-                        />
-                      </div>
-
-                    </Link> */}
 
                   {link && (
                     <Link
                       href={link}
                       target="_blank" 
-                      className="inline-flex items-center rounded-lg px-4 py-2 font-medium m-auto bg-primary hover:bg-black gap-1 my-10"
+                      className="inline-flex items-center rounded-lg px-4 py-2 font-medium m-auto bg-primary hover:bg-black gap-1 lg:my-10"
                     >
                       <div className="my-auto">
-                        <p className="text-white">{linkCaption} </p>
+                        <p className="text-white banner-link-caption">{linkCaption} </p>
                       </div>
 
                       <div className="my-auto">

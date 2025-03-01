@@ -79,6 +79,13 @@ html, body {
   background-image: url('/assets/images/hero/hero-7.svg');
 }
 
+/* .hero-main-2 {
+  margin-top: -10%;
+} */
+
+.hero-main {
+  margin-bottom: 2.5%;
+}
 
 .hero-text {
   line-height: 1.2em
@@ -98,50 +105,6 @@ html, body {
   line-height: 1.3em;
   letter-spacing: 10px;
 }
-
-/* .gradient-bg {
-  background: linear-gradient(120deg, #E86512 30%, #f4710f 70%);
-  
-} */
-
-/* .gradient-bg {
-  background: radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.2) 10%, transparent 50%),
-              radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.2) 10%, transparent 50%),
-              linear-gradient(180deg, #E86512, #f4710f);
-} */
-
-/* .gradient-bg {
-  background: 
-      radial-gradient(circle at left, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at right, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
-      linear-gradient(90deg, #E86512, #f4710f);
-  border-radius: 32px;
-} */
-
-/* .custom-bg {
-  position: relative;
-  background: linear-gradient(to right, #E86512, #f4710f);
-  border-radius: 32px;
-}
-
-.custom-bg::before,
-.custom-bg::after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.custom-bg::before {
-  left: -20%;
-}
-
-.custom-bg::after {
-  right: -20%;
-} */
 
 
 
@@ -203,7 +166,10 @@ html, body {
   font-size: 13px !important;
 }
 
-
+#contact-form-container {
+  width: fit-content;
+  padding: 1%;
+}
 /*
 
 */
@@ -217,8 +183,20 @@ html, body {
   .nine20 {
     width: 80%;
   }
+  
+
+
+  /* .hero-main-2 {
+    margin-top: -30%;
+  } */
+
+  /* .hero-heading-section {
+    margin-top: -2%;
+  } */
+
   .hero-text {
-    line-height: 2em
+    line-height: 2em;
+    font-size: 60px !important;
   }
 
   #services-container {
@@ -296,6 +274,9 @@ html, body {
 */
 @media screen and (max-width: 800px) {
 
+  /* *{
+    font-size: small !important;
+  } */
   .hero-section {
     background-size: cover;
     background-position: center;
@@ -329,8 +310,6 @@ html, body {
   
   .heelHeid-Logo {
     width: 60px;
-    /* height: 60.17px; */
-    margin-left: 1em
   }
 
   #services-container {
@@ -365,15 +344,14 @@ html, body {
 
 
   .footer {
-    padding: 10%;
+    margin-top: 10%;
+    padding: 5%;
   }
 
   .companyBottomLinks,
   .socialBottomLinks,
   .signatureBottomLinks {
-    margin-top: 10%;
-    display: flex;
-    justify-content: left;
+    margin-top: 6%;
   }
 
 
@@ -392,7 +370,7 @@ html, body {
  }
 
  .team-profile-content {
-   margin-top: 0% !important;
+   margin-top: -3em !important;
  }
 
  .banner-content-container {
@@ -429,6 +407,28 @@ html, body {
   right: 0%;
   border-radius: 15rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),rgba(255, 255, 255, 0.042),#D35D13, #D35D13,#D35D13, #D35D13,#D35D13, #D35D13);
+  }
+
+  .banner-dynamic-title {
+    font-size: large !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .banner-dynamic-caption {
+    font-size: small !important;
+  }
+
+  .banner-link-caption {
+    font-size: small !important;
+  }
+
+  .team-details {
+    font-size: small !important;
+  }
+
+  .team-details-smaller {
+    font-size: smaller !important;
   }
 
 }

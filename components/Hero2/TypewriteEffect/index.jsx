@@ -11,8 +11,9 @@ const HeroTypeWriter = () => {
         <Typewriter
             options={{
             strings: [
-                " Helping Startup Enterpreneurs Build and Grow a Sustainable and Successful Business  ",
-                " Building and Growing A Bootstarp Private Equity Company.",
+                " Helping Startup Build Successful Business.",
+                " Helping Enterprenuers Build Sustainable Business.",
+                " Building and Growing A Bootstrap Private Equity Company.",
             ],
             autoStart: true,
             loop: true,

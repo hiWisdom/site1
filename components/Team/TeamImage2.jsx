@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const TeamImage2 = ({team}) => {
   const [modal, setModalOpen] = useState(false);
@@ -9,7 +10,25 @@ const TeamImage2 = ({team}) => {
     return (
 
       <>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-wrap justify-between rounded-lg">
+      <motion.div 
+        variants={{
+        hidden: {
+            opacity: 0,
+            x: -50,
+        },
+
+        visible: {
+            opacity: 1,
+            x: 0,
+        },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
+        
+        viewport={{ once: true }}
+        className="animate_left grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-wrap justify-between rounded-lg"
+      >
 
 
         {team.map((item, index) => (
@@ -21,25 +40,20 @@ const TeamImage2 = ({team}) => {
           <Image
             src={item.image || null} // Replace with the actual path to your image
             alt={item.alt}
-            // width={1000}
-            // height={1000}
-            // priority
-            // className=" lg:w-[410px]"
-            
             width={1000}
             height={1000}
             priority
-            className="lg:h-auto rounded-t-[15px] lg:rounded-[24px]"
+            className="h-auto rounded-t-[15px] lg:rounded-[24px]"
           />
 
-          <div className="bg-black hover:bg-primary relative -mt-[7em] left-1/2 -translate-x-1/2 h-[119px] grid gap-2 rounded-b-[15px] lg:rounded-b-[24px] team-profile-content">
+          <div className="bg-black hover:bg-primary relative -mt-[7em] left-1/2 -translate-x-1/2 h-[90px] lg:h-[119px] grid gap-2 rounded-b-[15px] lg:rounded-b-[24px] team-profile-content">
 
           <div className="my-auto ml-5  grid gap-2">
 
           <div className=" w-fit my-auto flex gap-2 justify-between">
 
           <div className="">
-            <p className="text-white font-extrabold">{item.title}</p>
+            <p className="text-white font-extrabold team-details">{item.title}</p>
           </div>
 
           <button
@@ -61,7 +75,7 @@ const TeamImage2 = ({team}) => {
           </div>
 
           <div className="">
-            <div><p className="text-white">{item.description}</p></div>
+            <div><p className="text-white team-details team-details-smaller">{item.description}</p></div>
           </div>
 
           </div>
@@ -71,7 +85,7 @@ const TeamImage2 = ({team}) => {
         </div>
 
         ))}
-      </div>
+      </motion.div>
 
    
       {/* About Modal */}

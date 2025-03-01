@@ -36,20 +36,11 @@ const SubscribeCTA = () => {
   return (
     <>
       {/* <!-- ===== SubscribeCTA Start ===== --> */}
-      {/* <section className="overflow-hidden px-4 md:px-8 2xl:px-0 py-25"> */}
       <section className="my-5 lg:my-[6em] mx-[4%]">
-        {/* <div className="mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#DEE7FF] to-[#f4710f] px-7.5 py-12.5 md:px-12.5 xl:px-17.5 xl:py-0"> */}
-          {/* <div className="gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0  flex"> */}
-          {/* <div className="w-fit mx-auto bg-primary rounded-[32px] flex flex-col lg:flex-row nine20 lg:p-20 p-4 bg-gradient-to-r from-[#E86512] to-[#f4710f] "> */}
-          {/* <div className="w-fit mx-auto rounded-[32px] flex flex-col lg:flex-row nine20 lg:p-20 p-4"
-     style={{
-        background: "radial-gradient(circle at 30% 50%, #E86512, #f4710f)"
-     }}> */}
+
 
 <div className="container w-fit mx-auto rounded-[32px] flex flex-col lg:flex-row nine20 lg:p-20 p-4 custom-bg"
-    //  style={{
-    //     background: "linear-gradient(120deg, #E86512 30%, #f4710f 70%)"
-    //  }}
+
      
      >
 

@@ -10,7 +10,7 @@ export default function ContactImage() {
         <Image
           src={"/assets/images/contact/contact.svg" || null} // Replace with the actual path to your image
           alt="Contact representative"
-          className="rounded-xl object-cover h-[438px] w-[547px]"
+          className="rounded-xl lg:object-cover w-full lg:h-[438px] lg:w-[547px]"
           width={100}
           height={100}
           priority 

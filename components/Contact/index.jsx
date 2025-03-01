@@ -12,7 +12,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Form Section */}
-      <div className="lg:w-1/2 bg-white rounded-md py-6" id='contact-form-container'>
+      <div className="lg:w-1/2 bg-white rounded-md lg:py-6" id='contact-form-container'>
         <ContactForm />
       </div>
 

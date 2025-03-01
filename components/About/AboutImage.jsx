@@ -7,16 +7,6 @@ const AboutImage = () => {
   return (
     <div className="lg:w-fit lg:m-auto relative">
 
-      {/* Image */}
-      {/* <Image
-        src={"/assets/images/about/1.svg"}
-        alt="about"
-        className="rounded-xl shadow-md object-contain lg:w-[100%] w-full  transition-opacity duration-500 my-auto"
-        width={100}
-        height={100}
-        priority
-      /> */}
-
         <div
           className=" flex"
         >
@@ -30,7 +20,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col1/1.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain w-[80%] transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain w-[80%] transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -42,7 +32,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col1/2.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain w-full transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain w-full transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -59,7 +49,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col2/1.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain w-full transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain w-full transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -71,7 +61,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col2/2.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain w-full transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain w-full transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -84,7 +74,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col2/3.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain w-full transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain w-full transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -101,7 +91,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col3/1.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain lg:w-[100%] w-full  transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain lg:w-[100%] w-full  transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -113,7 +103,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col3/2.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain lg:w-[100%] w-full  transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain lg:w-[100%] w-full  transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -126,7 +116,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col3/3.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain lg:w-[100%] w-full  transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain lg:w-[100%] w-full  transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -143,7 +133,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col4/1.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain w-full  transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain w-full  transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority
@@ -157,7 +147,7 @@ const AboutImage = () => {
               <Image
                 src={"/assets/images/about/col4/2.svg"}
                 alt="about"
-                className="rounded-xl shadow-md object-contain w-[80%] transition-opacity duration-500 my-auto"
+                className="rounded-xl object-contain w-[80%] transition-opacity duration-500 my-auto"
                 width={100}
                 height={100}
                 priority

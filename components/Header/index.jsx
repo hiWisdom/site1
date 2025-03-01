@@ -13,14 +13,14 @@ const Header = () => {
     <header className="fixed w-full lg:h-[73px] bg-white shadow-md z-50">
       <nav className="container mx-auto flex justify-between items-center container-1420">
         {/* Site Logo */}
-        <div className="flex justify-center items-center text-xl font-bold text-blue-600 p-1 ">
+        <div className="flex justify-center items-center text-xl font-bold text-blue-600 p-1">
           <Link href="/">
             <Image 
               src={"/logo.svg"} 
               width={1000} 
               height={1000}
               alt="HeelHeid-Logo" 
-              className="heelHeid-Logo "
+              className="heelHeid-Logo"
               priority
               id="logo"
             />

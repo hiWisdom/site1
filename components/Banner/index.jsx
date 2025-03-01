@@ -17,11 +17,10 @@ export default function Banner() {
         caption: `
             A key challenge facing startup founders, CEOs, and entrepreneurs globally is establishing a sustainable recurring revenue model that generates consistent and predictable revenue to sustain startup business growth without seeking or relying on external capital funding. This deficiency can lead to cash flow volatility and hinder business growth. As one of our portfolio companies, Grow Higher University addresses this issue for startup founders, CEOs and entrepreneurs, providing a complimentary global online community, offering knowledge, tools, and expert guidance to foster a stable revenue stream, driving scalable growth, profitability, and long-term success for startup businesses.
         `,
-        // list: ["Poor digestion,","bloating,","acid reflux,","or an unhealthy gut can lead to severe complications if not addressed early.",],
         image: "/assets/images/banner/growhigher.svg",
         display: "row-reverse",
         bgColor: "#ECECEC",
-        link: "/#",
+        link: "https://www.growhigheruniversity.com/",
         linkCaption: "Signup To Be A Member Today!",
         }} 
       />
@@ -31,7 +30,6 @@ export default function Banner() {
         caption: `
             A key challenge facing non-venture backed startup founders, CEOs, and entrepreneurs is establishing a self-sustaining fundraising system to drive business growth without reliance on external capital funding. This deficiency can lead to funding uncertainty and hinder business advancement. As a coaching and mentorship portfolio company of Heelheid Business, FOUB-FS addresses this issue, providing coaching and mentorship with implementation support to help startup founders, CEOs, and entrepreneurs have an organic, sustainable, and unlimited fundraising system that consistently funds their business growth, without seeking and depending on external venture capital funds.
         `,
-        // list: ["Nutritional deficiencies,","Chronic bloating and discomfort,","Increased risk of colon cancer,","Digestive disorders such as IBS and GERD.",],
         image: "/assets/images/banner/foub-fs.svg",
         link: "https://calendly.com/heelheidbusiness-p938/fundraisingcall",
         linkCaption: "Schedule A Call To Setup Your Business Fundraising System",
@@ -46,7 +44,7 @@ export default function Banner() {
         `,
         image: "/assets/images/banner/amica.svg",
         display: "row-reverse",
-        link: "/#",
+        link: "/amica",
         linkCaption: "Join Our Premium Members Waiting List For Amica",
         bgColor: "#ECECEC",
         }} 

@@ -1,6 +1,7 @@
 "use client";
 import { workwithus } from "../../SiteMaps/data";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function WorkwithUs() {
   return (
@@ -19,14 +20,32 @@ export default function WorkwithUs() {
 
                 <div className="">
 
-                    <div className="w-fit m-auto text-center">
-                        <h1 className="text-[48px] text-white" style={{fontFamily:'AvenirBold'}}>Work with us</h1>
+                    <motion.div 
+                        variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: 50,
+                        },
+    
+                        visible: {
+                            opacity: 1,
+                            y: 0,
+                        },
+                        }}
+                        initial="hidden"
+                        whileInView="visible"
+                        transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
+                        
+                        viewport={{ once: true }}
+                        className="animate_top w-fit m-auto text-center"
+                    >
+                        <h1 className="text-[30px] lg:text-[48px] text-white" style={{fontFamily:'AvenirBold'}}>Work with us</h1>
                         <p 
                         className="text-white lg:w-[536px]"
                         >
                             We are always happy and ready to work with you. Let us bring your business back to life.
                         </p>
-                    </div>
+                    </motion.div>
 
                 </div>
 
@@ -34,12 +53,46 @@ export default function WorkwithUs() {
 
                     {workwithus.map((item, index) => (
                         
-                        <div 
-                            className="bg-white lg:w-1/3 h-[194px] rounded-[16px]"
+                        <motion.div 
+                            variants={{
+                            hidden: {
+                                opacity: 0,
+                                y: 50,
+                            },
+        
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                            },
+                            }}
+                            initial="hidden"
+                            whileInView="visible"
+                            transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
+                            
+                            viewport={{ once: true }}
+                            className="animate_top bg-white lg:w-1/3 h-[194px] rounded-[16px]"
                             key={index}
                         >
 
-                            <div className="mt-9">
+                            <motion.div 
+                                variants={{
+                                hidden: {
+                                    opacity: 0,
+                                    y: 50,
+                                },
+            
+                                visible: {
+                                    opacity: 1,
+                                    y: 0,
+                                },
+                                }}
+                                initial="hidden"
+                                whileInView="visible"
+                                transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
+                                
+                                viewport={{ once: true }}
+                                className="animate_top mt-9"
+                            >
 
                                 <div className="w-[80%] m-auto">
                                     <p className="text-[32px] text-extrabold" style={{fontFamily:'AvenirBold'}}>{item.title}</p>
@@ -49,24 +102,42 @@ export default function WorkwithUs() {
                                     <p>{item.description}</p>
                                 </div>
 
-                            </div>
+                            </motion.div>
 
-                        </div>
+                        </motion.div>
 
                     ))}
                 </div>
 
-                <div className="grid gap-5">
+                <motion.div 
+                    variants={{
+                    hidden: {
+                        opacity: 0,
+                        y: 50,
+                    },
+
+                    visible: {
+                        opacity: 1,
+                        y: 0,
+                    },
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
+                    
+                    viewport={{ once: true }}
+                    className="animate_top grid gap-5"
+                >
                         
-                    <div className="mx-auto">
-                        <p className="text-white text-center font-extrabold">Send us an email</p>
+                    <div className="mx-auto ">
+                        <p className="text-white text-center font-extrabold hover:scale-3d">Send us an email</p>
                     </div>
                     
-                    <div className="border border-[white] bg-white hover:bg-transparent px-4 py-3 mx-auto w-fit flex gap-2 rounded-lg">
+                    <div className="border border-[white] bg-white hover:scale-75 hover:bg-transparent px-4 py-3 mx-auto w-fit flex gap-2 rounded-lg">
 
                         <div className="cursor h-fit my-auto">
                             <Image
-                                src={"/assets/icons/mail-black.svg"}
+                                src={"/assets/icons/mail-black0.svg"}
                                 width={1000}
                                 height={1000}
                                 alt="mail"
@@ -81,7 +152,7 @@ export default function WorkwithUs() {
 
                     <div></div>
                     
-                </div>
+                </motion.div>
 
             </div>
         

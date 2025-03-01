@@ -40,7 +40,7 @@ const Footer = () => {
 
     return (
         <footer className="pt-20 w-full footer">
-            <div className="container mx-auto flex flex-wrap justify-between space-y-6 sm:space-y-0 lg:gap-5">
+            <div className="container mx-auto flex flex-wrap justify-between gap-y-10 sm:space-y-0 lg:gap-5">
                 <Section title="Company" links={FooterLinks.company} />
                 <Section title="Links" links={FooterLinks.link} />
                 <ContactSection contacts={FooterLinks.contact} />
@@ -52,7 +52,7 @@ const Footer = () => {
 };
 
 const Section = ({ title, links }) => (
-    <AnimatedDiv className="w-56 flex-1 min-w-48">
+    <AnimatedDiv className="lg:w-56 lg:flex-1 lg:min-w-48">
         <h2 className="text-1xl font-semibold text-gray-800 mb-4">{title}</h2>
         <ul className="text-gray-600 space-y-2">
             {links.map((link, index) => (
@@ -70,7 +70,13 @@ const ContactSection = ({ contacts }) => (
         <ul className="text-gray-600 space-y-2">
             {contacts.map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
-                    <Image src={item.iconPath || ""} width={20} height={20} alt="Contact-Icons" className="h-[14px] w-auto h-auto" />
+                    <Image 
+                        src={item.iconPath || ""} 
+                        width={100} 
+                        height={100} 
+                        alt="Contact-Icons" 
+                        className="w-[15px] h-[15px]" 
+                    />
                     <Link href={item.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{item.name}</Link>
                 </li>
             ))}
@@ -104,9 +110,9 @@ const FooterBottom = ({ currentYear }) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="border-t border-gray-300 mt-6 py-6 flex flex-col sm:flex-row justify-between container mx-auto text-gray-600 ">
+        <div className="border-t border-gray-300 lg:mt-6 py-6 flex flex-col sm:flex-row justify-between container mx-auto text-gray-600  ">
 
-            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto sm:order-last ">
+            <div className="flex flex-col sm:flex-row lg:justify-between lg:items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto sm:order-last ">
 
                 <div className="flex gap-4 sm:gap-6 lg:items-center lg:justify-center companyBottomLinks ">
                     {FooterLinks.footerBottom.map((link, index) => (
@@ -121,7 +127,7 @@ const FooterBottom = ({ currentYear }) => {
                     ))}
                 </div>
 
-                <div className="flex space-x-4 items-center socialBottomLinks  my-auto">
+                <div className="flex space-x-4 lg:items-center socialBottomLinks  my-auto">
                     {FooterLinks.social.map((social, index) => (
                         <Link
                             key={index}
@@ -144,8 +150,8 @@ const FooterBottom = ({ currentYear }) => {
 
             </div>
 
-            <div className="flex gap-4 items-center justify-center sm:justify-start signatureBottomLinks ">
-                <p className="text-[14px] text-center sm:text-left">© {currentYear} Heelheid Business Acqusition & Management Company. All Rights Reserved.</p>
+            <div className="flex gap-4 lg:items-center lg:justify-center signatureBottomLinks ">
+                <p className="text-[14px] text-left">© {currentYear} Heelheid Business Acqusition & Management Company. All Rights Reserved.</p>
             </div>
 
         </div>

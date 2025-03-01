@@ -28,7 +28,7 @@ const Product_Services = ({product_services}) => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className="animate_top w-fit mb-4"
+            className="animate_top w-fit mb-4 lg:ml-3"
             id="services-text"
         >
 
@@ -36,9 +36,8 @@ const Product_Services = ({product_services}) => {
             className='lg:w-[85%]'
         >
 
-            {/* <p className="lg:text-[16px] font-bold text-[14px] leading-[2em] services-text-title-cite">We provide the best services</p> */}
                 
-            <h1 className="lg:text-[48px] text-[24px] leading-[2em] services-text-title" style={{fontFamily:"AvenirBold"}}>Our Services</h1>
+            <h1 className="text-[20px] lg:text-[48px] leading-[2em] services-text-title" style={{fontFamily:"AvenirBold"}}>Our Services</h1>
 
             
             <p className="text-[15px] services-text-description text-justify">At Heelheid, we empower entrepreneurs and businesses to achieve sustainable growth and success. Our services are designed to support businesses at various stages of their journey.</p>
@@ -68,13 +67,12 @@ const Product_Services = ({product_services}) => {
                     transition={{ duration: 1, delay: 0.1, ease:"circIn" }}
                     
                     viewport={{ once: true }}
-                    className="animate_top mx-3 services-box bg-primary w-[100%] py-5 px-2 rounded-lg lg:mb-0 mb-2"
+                    className="animate_top lg:mx-3 services-box bg-primary w-[100%] p-6 rounded-lg lg:mb-0 mb-2"
                     key={index}
                 >               
-                    {/* <div  className='bg-primary w-[100%] py-5 px-2 rounded-lg lg:mb-0 mb-2'> */}
+                  
 
-
-                    <div className='w-[50px] h-[50px] border rounded-full border-[#000]'>
+                    <div className='w-[50px] h-[50px] rounded-full'>
                         <Image
                             src={item.image || null}
                             width={100}
